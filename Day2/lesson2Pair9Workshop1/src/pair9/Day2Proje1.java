@@ -1,6 +1,6 @@
 package pair9;
 
-public class Day1Proje1 {
+public class Day2Proje1 {
 	
 	public static void main(String[] args) {
 		
