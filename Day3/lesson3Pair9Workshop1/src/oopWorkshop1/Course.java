@@ -73,8 +73,20 @@ public class Course {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return "Kurs id: " + this.id + ", Ýsim: " + this.name + ", Açýklama: " + this.description + ", Ýmage: " + this.image ;
+		System.out.print("Kurs id: " + this.id + ", Ýsim: " + this.name + ", Açýklama: " + this.description + ", Ýmage: " + this.image);
+		this.getCourseInformation();
+		return "";
+	}
+	
+	public void getCourseInformation() {
+		System.out.print(", Eðitmenler: ");
+		for(Instructor instructor : this.getInstructor()) {
+			System.out.print(instructor.getFirstName() + " " + instructor.getLastName() + ", ");
+		}
+		System.out.print(" Kategoriler: ");
+		for(Category category : this.getCategory()) {
+			System.out.print(category.getName() + ", ");
+		}
 	}
 	
 }

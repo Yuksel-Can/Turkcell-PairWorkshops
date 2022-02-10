@@ -43,8 +43,17 @@ public class Category {
 	
 	@Override
 	public String toString() {
-
-		return "Kategory Ýd: " + this.id + " ,Kategori Adý: " + this.name;
+		
+		System.out.print("Kategory Ýd: " + this.id + " ,Kategori Adý: " + this.name);
+		this.getCategoryInformation();
+		return "\n";
 	}
 	
+	public void getCategoryInformation() {
+
+		System.out.print(" , Kurslar: ");
+		for(Course course : this.getCourse()) {
+			System.out.print(course.getName() + ", ");
+		}
+	}
 }

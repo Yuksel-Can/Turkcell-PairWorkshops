@@ -31,36 +31,25 @@ public class Main {
 		instructor1.setCourse(new Course[] {course1, course2});
 		instructor2.setCourse(new Course[] {course3});
 		instructor3.setCourse(new Course[] {course2});
-		
-		
-		System.out.print(course1);
-		for(Instructor instructor : course1.getInstructor()) {
-			System.out.print(" Eðitmenler: " + instructor.getFirstName() + " " + instructor.getLastName());
-		}
-		System.out.println("");
-		System.out.print(course2);
-		for(Instructor instructor : course2.getInstructor()) {
-			System.out.print(" Eðitmenler: " + instructor.getFirstName() + " " + instructor.getLastName());
-		}	
-		System.out.println("");
-		System.out.print(course3);
-		for(Instructor instructor : course3.getInstructor()) {
-			System.out.print(" Eðitmenler: " + instructor.getFirstName() + " " + instructor.getLastName());
-		}
-		System.out.println("");
-		
+
 		System.out.println("/********************************/");
 		
-		System.out.println(category1);
-		System.out.println(category2);
-		System.out.println(category3);
-		
+		System.out.println(course1);
+		System.out.println(course2);
+		System.out.println(course3);
+
+		System.out.println("/********************************/");
+	
+		System.out.print(category1);
+		System.out.print(category2);
+		System.out.print(category3);
+
 		System.out.println("/********************************/");
 		
-		System.out.println(instructor1);
-		System.out.println(instructor2);
-		System.out.println(instructor3);
-		
+		System.out.print(instructor1);
+		System.out.print(instructor2);
+		System.out.print(instructor3);
+//		
 	}
 
 }

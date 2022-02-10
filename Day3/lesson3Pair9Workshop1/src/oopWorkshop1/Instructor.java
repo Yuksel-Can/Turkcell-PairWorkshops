@@ -64,7 +64,16 @@ public class Instructor {
 	@Override
 	public String toString() {
 
-		return "Eðitmen Ýd: " + this.id + ", Eðitmen Adý: " + this.firstName + " " + this.lastName + " Eðitmen Resmi: " + this.image;
+		System.out.print("Eðitmen Ýd: " + this.id + ", Eðitmen Adý: " + this.firstName + " " + this.lastName + " Eðitmen Resmi: " + this.image);
+		this.getInstructorInformation();
+		return "\n";
 	}
 	
+	public void getInstructorInformation() {
+
+		System.out.print(" , Kurslar: ");
+		for(Course course : this.getCourse()) {
+			System.out.print(course.getName() + ", ");
+		}
+	}
 }
