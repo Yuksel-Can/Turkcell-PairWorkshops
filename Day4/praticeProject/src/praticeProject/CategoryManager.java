@@ -13,5 +13,9 @@ public class CategoryManager {
 	public void delete(Category category) {
 		System.out.println("Kategori silindi: " + category.getName());
 	}
+	
+	public void registerCourse(Category category, Course[] course) {
+		category.setCourse(course);
+	}
 
 }

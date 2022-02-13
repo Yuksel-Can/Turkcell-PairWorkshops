@@ -1,18 +1,21 @@
 package praticeProject;
 
+import java.util.ArrayList;
+
 public class Student extends User{
 
 	private int certificateCount;
 
-	private Course[] registeredCourses;
-
+	private ArrayList<Course> registeredCourses;
+	
 	public Student() {
 		super();
 	}
 
-	public Student(int id, String firstName, String lastName, String email, int certificateCount) {
+	public Student(int id, String firstName, String lastName, String email, int certificateCount, ArrayList<Course> registerefCourses) {
 		super(id, firstName, lastName, email);
 		this.certificateCount = certificateCount;
+		this.registeredCourses = registerefCourses;
 	}
 
 	public int getCertificateCount() {
@@ -21,14 +24,6 @@ public class Student extends User{
 
 	public void setCertificateCount(int certificateCount) {
 		this.certificateCount = certificateCount;
-	}
-
-	public Course[] getRegisteredCourses() {
-		return registeredCourses;
-	}
-
-	public void setRegisteredCourses(Course[] registeredCourses) {
-		this.registeredCourses = registeredCourses;
 	}
 	
 	@Override
@@ -45,5 +40,13 @@ public class Student extends User{
 		for(Course course : this.getRegisteredCourses()) {
 			System.out.print(course.getName() + ", ");
 		}
+	}
+
+	public ArrayList<Course> getRegisteredCourses() {
+		return registeredCourses;
+	}
+
+	public void setRegisteredCourses(Course course) {
+		registeredCourses.add(course);						//onemli
 	}
 }

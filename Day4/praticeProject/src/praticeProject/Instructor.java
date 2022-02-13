@@ -1,19 +1,21 @@
 package praticeProject;
 
+import java.util.ArrayList;
 
 public class Instructor extends User{
 	
 	private String image;
 
-	private Course[] taughtCourses;
-
+	private ArrayList<Course> taughtCourses;
+	
 	public Instructor() {
 		super();
 	}
 	
-	public Instructor(int id, String firstName, String lastName, String email, String image) {
+	public Instructor(int id, String firstName, String lastName, String email, String image, ArrayList<Course> taughtCourses) {
 		super(id, firstName, lastName, email);
 		this.image = image;
+		this.taughtCourses = taughtCourses;
 	}
 
 	public String getImage() {
@@ -24,13 +26,6 @@ public class Instructor extends User{
 		this.image = image;
 	}
 
-	public Course[] getTaughtCourses() {
-		return taughtCourses;
-	}
-
-	public void setTaughtCourses(Course[] taughtCourses) {
-		this.taughtCourses = taughtCourses;
-	}
 	
 	@Override
 	public String toString() {
@@ -46,6 +41,14 @@ public class Instructor extends User{
 		for(Course course : this.getTaughtCourses()) {
 			System.out.print(course.getName() + ", ");
 		}
+	}
+
+	public ArrayList<Course> getTaughtCourses() {
+		return taughtCourses;
+	}
+
+	public void setTaughtCourses(Course course) {
+		this.taughtCourses.add(course);				//onemli
 	}
 
 }
