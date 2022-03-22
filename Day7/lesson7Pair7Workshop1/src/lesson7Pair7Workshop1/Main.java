@@ -2,6 +2,7 @@ package lesson7Pair7Workshop1;
 
 import java.util.ArrayList;
 
+import lesson7Pair7Workshop1.business.concretes.LoginManager;
 import lesson7Pair7Workshop1.business.concretes.UserManager;
 import lesson7Pair7Workshop1.dataAccess.concretes.HibernateImpls.HibernateUserDao;
 import lesson7Pair7Workshop1.entities.concretes.User;
@@ -26,5 +27,12 @@ public class Main {
 		for(User user:users) {
 			System.out.println(user.getFirstName() + " " + user.getLastName());
 		}
+		
+		System.out.println("/**************/");
+		
+		LoginManager loginManager = new LoginManager(users);
+		loginManager.login("yuksel@gmail.com", "123456789");
+		loginManager.login("yuksel.can@gmail.com", "123");
+		loginManager.login("yuksel.can@gmail.com", "123456789");
 	}
 }
